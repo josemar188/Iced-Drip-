@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=375px, initial-scale=1.0">
+<title>Loja de Roupas</title>
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+<script>
+tailwind.config = {
+theme: {
+extend: {
+colors: {
+primary: '#D4AF37',
+secondary: '#B8860B',
+gray: {
+700: '#1A1A1A',
+800: '#121212',
+900: '#000000'
+}
+},
+borderRadius: {
+'none': '0px',
+'sm': '4px',
+DEFAULT: '8px',
+'md': '12px',
+'lg': '16px',
+'xl': '20px',
+'2xl': '24px',
+'3xl': '32px',
+'full': '9999px',
+'button': '8px'
+}
+}
+}
+}
+</script>
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+.hide-scrollbar::-webkit-scrollbar {
+display: none;
+}
+.hide-scrollbar {
+-ms-overflow-style: none;
+scrollbar-width: none;
+}
+</style>
+</head>
+<body class="bg-black text-white w-[375px] min-h-[762px] mx-auto relative">
+<header class="fixed top-0 w-full bg-gray-800 z-50">
+<div class="flex items-center justify-between px-4 h-14">
+<button class="w-10 h-10 flex items-center justify-center cursor-pointer">
+<i class="ri-menu-line text-xl"></i>
+</button>
+<h1 class="text-2xl font-['Pacifico']">logo</h1>
+<div class="flex gap-2">
+<button class="w-10 h-10 flex items-center justify-center cursor-pointer">
+<i class="ri-heart-line text-xl"></i>
+</button>
+<button class="w-10 h-10 flex items-center justify-center cursor-pointer relative">
+<i class="ri-shopping-cart-line text-xl"></i>
+<span class="absolute -top-1 -right-1 bg-primary text-white text-xs w-5 h-5 rounded-full flex items-center justify-center">3</span>
+</button>
+</div>
+</div>
+<div class="px-4 pb-3">
+<div class="relative">
+<input type="text" placeholder="Pesquisar produtos..." class="w-full h-10 bg-gray-700 rounded-full pl-10 pr-4 text-sm border-none placeholder-gray-400 text-white">
+<i class="ri-search-line absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
+</div>
+</div>
+</header>
+<main class="pt-28 pb-20">
+<div class="relative h-48 mb-6">
+<img src="https://static.readdy.ai/image/9ad335477dd575fcbba683ca150df02f/0f6299003027ef79b013fb9857d9b784.jpeg" class="w-full h-full object-cover" alt="Banner">
+</div>
+<div class="px-4 mb-8">
+<div class="flex overflow-x-auto hide-scrollbar gap-6 py-2">
+<div class="flex flex-col items-center gap-2 w-16">
+<div class="w-16 h-16 rounded-full overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=icon%2C%20womens%20fashion%20items%2C%20minimal%20design%2C%20soft%20colors%2C%20centered%20composition%2C%20isolated%20on%20white%20background&width=64&height=64&seq=2&orientation=squarish" class="w-full h-full object-cover" alt="Feminino">
+</div>
+<span class="text-xs whitespace-nowrap">Feminino</span>
+</div>
+<div class="flex flex-col items-center gap-2 w-16">
+<div class="w-16 h-16 rounded-full overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=icon%2C%20mens%20fashion%20items%2C%20minimal%20design%2C%20soft%20colors%2C%20centered%20composition%2C%20isolated%20on%20white%20background&width=64&height=64&seq=3&orientation=squarish" class="w-full h-full object-cover" alt="Masculino">
+</div>
+<span class="text-xs whitespace-nowrap">Masculino</span>
+</div>
+<div class="flex flex-col items-center gap-2 w-16">
+<div class="w-16 h-16 rounded-full overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=icon%2C%20kids%20fashion%20items%2C%20minimal%20design%2C%20soft%20colors%2C%20centered%20composition%2C%20isolated%20on%20white%20background&width=64&height=64&seq=4&orientation=squarish" class="w-full h-full object-cover" alt="Infantil">
+</div>
+<span class="text-xs whitespace-nowrap">Infantil</span>
+</div>
+<div class="flex flex-col items-center gap-2 w-16">
+<div class="w-16 h-16 rounded-full overflow-hidden">
+<img src="https://readdy.ai/api/search-image?query=icon%2C%20fashion%20accessories%2C%20minimal%20design%2C%20soft%20colors%2C%20centered%20composition%2C%20isolated%20on%20white%20background&width=64&height=64&seq=5&orientation=squarish" class="w-full h-full object-cover" alt="Acessórios">
+</div>
+<span class="text-xs whitespace-nowrap">Acessórios</span>
+</div>
+</div>
+</div>
+<div class="px-4">
+<div class="flex gap-2 mb-6 overflow-x-auto hide-scrollbar">
+<button class="px-4 py-2 bg-primary text-white rounded-full text-sm whitespace-nowrap !rounded-button">Mais Vendidos</button>
+<button class="px-4 py-2 bg-gray-800 rounded-full text-sm whitespace-nowrap !rounded-button">Novidades</button>
+<button class="px-4 py-2 bg-gray-800 rounded-full text-sm whitespace-nowrap !rounded-button">Promoções</button>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="bg-gray-800 rounded-lg overflow-hidden shadow-md border border-primary/30">
+<div class="relative">
+<img src="https://readdy.ai/api/search-image?query=modern%20minimalist%20white%20t-shirt%2C%20professional%20product%20photography%2C%20clean%20background%2C%20centered%20composition&width=160&height=200&seq=6&orientation=portrait" class="w-full h-48 object-cover" alt="Camiseta Básica">
+<span class="absolute top-2 left-2 bg-primary text-white text-xs px-2 py-1 rounded-full">-20%</span>
+</div>
+<div class="p-3">
+<h3 class="text-sm font-medium mb-1">Camiseta Básica</h3>
+<div class="flex items-center gap-2 mb-2">
+<span class="text-primary font-medium">R$ 79,90</span>
+<span class="text-xs text-gray-500 line-through">R$ 99,90</span>
+</div>
+<button class="w-full py-2 bg-primary text-white text-sm !rounded-button" onclick="showPaymentModal()">Adicionar</button>
+</div>
+</div>
+<div class="bg-gray-800 rounded-lg overflow-hidden shadow-md border border-primary/30">
+<div class="relative">
+<img src="https://readdy.ai/api/search-image?query=modern%20jeans%20pants%2C%20professional%20product%20photography%2C%20clean%20background%2C%20centered%20composition&width=160&height=200&seq=7&orientation=portrait" class="w-full h-48 object-cover" alt="Calça Jeans">
+<span class="absolute top-2 left-2 bg-primary text-black text-xs px-2 py-1 rounded-full">Novo</span>
+</div>
+<div class="p-3">
+<h3 class="text-sm font-medium mb-1">Calça Jeans Skinny</h3>
+<div class="flex items-center gap-2 mb-2">
+<span class="text-primary font-medium">R$ 159,90</span>
+</div>
+<button class="w-full py-2 bg-primary text-white text-sm !rounded-button" onclick="showPaymentModal()">Adicionar</button>
+</div>
+</div>
+<div class="bg-gray-800 rounded-lg overflow-hidden shadow-md border border-primary/30">
+<div class="relative">
+<img src="https://readdy.ai/api/search-image?query=modern%20dress%2C%20professional%20product%20photography%2C%20clean%20background%2C%20centered%20composition&width=160&height=200&seq=8&orientation=portrait" class="w-full h-48 object-cover" alt="Vestido">
+</div>
+<div class="p-3">
+<h3 class="text-sm font-medium mb-1">Vestido Floral</h3>
+<div class="flex items-center gap-2 mb-2">
+<span class="text-primary font-medium">R$ 189,90</span>
+</div>
+<button class="w-full py-2 bg-primary text-white text-sm !rounded-button" onclick="showPaymentModal()">Adicionar</button>
+</div>
+</div>
+<div class="bg-gray-800 rounded-lg overflow-hidden shadow-md border border-primary/30">
+<div class="relative">
+<img src="https://readdy.ai/api/search-image?query=modern%20jacket%2C%20professional%20product%20photography%2C%20clean%20background%2C%20centered%20composition&width=160&height=200&seq=9&orientation=portrait" class="w-full h-48 object-cover" alt="Jaqueta"></div>
+<div class="p-3">
+<h3 class="text-sm font-medium mb-1">Jaqueta Jeans</h3>
+<div class="flex items-center gap-2 mb-2">
+<span class="text-primary font-medium">R$ 229,90</span>
+</div>
+<button class="w-full py-2 bg-primary text-white text-sm !rounded-button" onclick="showPaymentModal()">Adicionar</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<nav class="fixed bottom-0 w-full bg-gray-800 border-t border-primary/30">
+<div class="grid grid-cols-5 h-16">
+<button class="flex flex-col items-center justify-center gap-1">
+<i class="ri-home-line text-lg text-primary"></i>
+<span class="text-[10px]">Início</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-1">
+<i class="ri-apps-line text-lg text-gray-500"></i>
+<span class="text-[10px]">Categorias</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-1">
+<i class="ri-search-line text-lg text-gray-500"></i>
+<span class="text-[10px]">Buscar</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-1">
+<i class="ri-heart-line text-lg text-gray-500"></i>
+<span class="text-[10px]">Favoritos</span>
+</button>
+<button class="flex flex-col items-center justify-center gap-1">
+<i class="ri-user-line text-lg text-gray-500"></i>
+<span class="text-[10px]">Perfil</span>
+</button>
+</div>
+</nav>
+<div id="paymentModal" class="fixed inset-0 bg-gray-900/80 z-50 hidden">
+<div class="fixed bottom-0 left-0 right-0 bg-gray-800 rounded-t-xl p-4">
+<div class="flex justify-between items-center mb-4">
+<h3 class="text-lg font-medium">Método de Pagamento</h3>
+<button onclick="hidePaymentModal()" class="w-8 h-8 flex items-center justify-center">
+<i class="ri-close-line text-xl"></i>
+</button>
+</div>
+<div class="space-y-3">
+<button class="w-full flex items-center gap-3 p-4 bg-gray-800 rounded-lg !rounded-button">
+<i class="ri-bank-card-fill text-xl text-primary"></i>
+<div class="flex-1 text-left">
+<div class="font-medium">Cartão de Crédito</div>
+<div class="text-sm text-gray-400">Visa, Mastercard, Elo</div>
+</div>
+<i class="ri-arrow-right-s-line text-xl text-gray-400"></i>
+</button>
+<button class="w-full flex items-center gap-3 p-4 bg-gray-800 rounded-lg !rounded-button">
+<i class="ri-qr-code-fill text-xl text-primary"></i>
+<div class="flex-1 text-left">
+<div class="font-medium">Pix</div>
+<div class="text-sm text-gray-400">Pagamento instantâneo</div>
+</div>
+<i class="ri-arrow-right-s-line text-xl text-gray-400"></i>
+</button>
+<button class="w-full flex items-center gap-3 p-4 bg-gray-800 rounded-lg !rounded-button">
+<i class="ri-money-dollar-circle-fill text-xl text-primary"></i>
+<div class="flex-1 text-left">
+<div class="font-medium">Boleto Bancário</div>
+<div class="text-sm text-gray-400">Prazo de 1-3 dias úteis</div>
+</div>
+<i class="ri-arrow-right-s-line text-xl text-gray-400"></i>
+</button>
+</div>
+<button class="w-full py-3 bg-primary text-white font-medium mt-4 !rounded-button">
+Continuar
+</button>
+</div>
+</div>
+<script>
+function showPaymentModal() {
+document.getElementById('paymentModal').classList.remove('hidden');
+document.body.style.overflow = 'hidden';
+}
+function hidePaymentModal() {
+document.getElementById('paymentModal').classList.add('hidden');
+document.body.style.overflow = 'auto';
+}
+</script>
+</body>
+</html>
